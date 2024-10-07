@@ -1,6 +1,20 @@
-<!-- TODO: implementar toolbar de angular material -->
 <app-header></app-header>
-<!-- TODO: implementar un navbar para el menú lateral -->
- <app-navbar></app-navbar>
-<!-- TODO: vista de listado -->
- <app-students></app-students>
+
+<mat-drawer-container class="container-fluid" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-navbar></app-navbar>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <div class="col-1">
+       <button type="button" class="ms-1" mat-button (click)="drawer.toggle(); arrowToggle = arrowToggle === 'arrow_back_ios' ? 'arrow_forward_ios' : 'arrow_back_ios'">
+      <mat-icon>{{arrowToggle}}</mat-icon>
+    </button>
+    </div>
+    <div class="col">
+      <app-students></app-students>
+    </div>
+  </div>
+
+</mat-drawer-container>
