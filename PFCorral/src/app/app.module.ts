@@ -10,6 +10,7 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { StudentsComponent } from './features/students/students.component';
 import { CoursesComponent } from './features/courses/courses.component';
 import { ClassesComponent } from './features/classes/classes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import { ClassesComponent } from './features/classes/classes.component';
     DashboardComponent,
     StudentsComponent,
     CoursesComponent,
-    ClassesComponent
+    ClassesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
