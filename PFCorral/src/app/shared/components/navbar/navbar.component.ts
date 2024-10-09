@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  public messages: string[] = ['lista de alumnos', 'cursos', 'clases'];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log('navbar');
   }
 
 }

@@ -1,3 +1,8 @@
 <aside>
-    <h1>navbar en forma de menu</h1>
+  <mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <mat-icon matListIcon>auto_stories</mat-icon>
+      <h3 matLine> {{message}} </h3>
+    </mat-list-item>
+  </mat-list>
   </aside>

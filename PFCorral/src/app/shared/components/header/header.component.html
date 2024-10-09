@@ -1,3 +1,14 @@
-<header>
-    <h1 class="toolbar">toolbar</h1>
-  </header>
+<header class="sticky-top">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <span>{{title}}</span>
+    <span class="example-spacer"></span>
+   
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+</header>
