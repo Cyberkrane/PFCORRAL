@@ -1,7 +1,16 @@
 <main>
   
   <h1>Lista y ABM de Alumnos</h1>
+  <button
+  mat-raised-button
+  color="primary"
+  class="my-2"
+  (click)="addStudent(student)"
+  >
+  Agregar Alumno
+  </button>
   <div class="mat-elevation-z8">
+    
     <table mat-table [dataSource]="dataSource">
   
       <ng-container matColumnDef="nombre">
@@ -30,7 +39,9 @@
           <button
             mat-icon-button
             color="primary"
-            (click)="editStudent(element)"
+            (click)="updateStudent(element)"
+            #tooltip="matTooltip"
+            matTooltip="Editar a {{element.nombre}} {{element.apellido}}"
           >
             <mat-icon>edit</mat-icon>
           </button>
@@ -38,6 +49,8 @@
             mat-icon-button
             color="warn"
             (click)="deleteStudent(element)"
+            #tooltip="matTooltip"
+            matTooltip="Eliminar a {{element.nombre}} {{element.apellido}}"
           >
             <mat-icon>delete</mat-icon>
           </button>
@@ -49,10 +62,12 @@
     </table>
   
     <mat-paginator
-      [pageSizeOptions]="[5, 10, 20]"
+      [pageSizeOptions]="[10, 5, 20]"
       showFirstLastButtons
     >
     </mat-paginator>
   </div>
 
 </main>
+
+
