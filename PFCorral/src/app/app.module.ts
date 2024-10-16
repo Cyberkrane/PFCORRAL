@@ -7,18 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
-import { StudentsComponent } from './features/students/students.component';
-import { CoursesComponent } from './features/courses/courses.component';
-import { ClassesComponent } from './features/classes/classes.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    StudentsComponent,
-    CoursesComponent,
-    ClassesComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,6 +20,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditStudentDialogComponent } from './components/edit-student-dialog/edit-student-dialog.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSelectModule,
     MatOptionModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTooltipModule
   ],
   exports: [
     HeaderComponent,
@@ -62,8 +64,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSelectModule,
     MatOptionModule,
     ReactiveFormsModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    MatTooltipModule
   ]
 })
 export class SharedModule { }
